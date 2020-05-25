@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/camera_ui_container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layoutDirection="ltr">
+
+    <Button
+        android:id="@+id/camera_switch_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:text="Rotate"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/camera_ui_container_btn_capture"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/camera_ui_container_btn_capture"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Capture"
+        app:layout_constraintBottom_toBottomOf="@+id/camera_switch_btn"
+        app:layout_constraintEnd_toStartOf="@+id/gallery_btn"
+        app:layout_constraintStart_toEndOf="@+id/camera_switch_btn"
+        app:layout_constraintTop_toTopOf="@+id/camera_switch_btn" />
+
+    <Button
+        android:id="@+id/gallery_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Tumbnail"
+        app:layout_constraintBottom_toBottomOf="@id/camera_ui_container_btn_capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/camera_ui_container_btn_capture"
+        app:layout_constraintTop_toTopOf="@id/camera_ui_container_btn_capture" />
+</androidx.constraintlayout.widget.ConstraintLayout>
